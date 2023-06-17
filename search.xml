@@ -21,4 +21,36 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>解决hexo博文图片不显示的方法</title>
+    <url>/2023/06/17/%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E6%96%87%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<pre><code>配置参考：
+hexo: 6.3.0
+hexo-cli: 4.3.1
+node: 14.17.6
+</code></pre>
+<p>[TOC]</p>
+<h3 id="先说一下Hexo在博客中插入图片的教程"><a href="#先说一下Hexo在博客中插入图片的教程" class="headerlink" title="先说一下Hexo在博客中插入图片的教程"></a>先说一下Hexo在博客中插入图片的教程</h3><h5 id="【第一步】确保-博客根目录的-config-yml-中-post-asset-folder-true"><a href="#【第一步】确保-博客根目录的-config-yml-中-post-asset-folder-true" class="headerlink" title="【第一步】确保 博客根目录的_config.yml 中 post_asset_folder: true"></a>【第一步】确保 博客根目录的<code>_config.yml</code> 中 <code>post_asset_folder: true</code></h5><p>这个配置的意思是每次new post一个博客，会增加一个和博客同名的文件夹。</p>
+<p><img src="/2023/06/17/%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E6%96%87%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E6%96%B9%E6%B3%95/show1.jpg"></p>
+<h5 id="【第二步】在根目录安装hexo-asset-image，就能按照markdown的格式进行图片的插入。"><a href="#【第二步】在根目录安装hexo-asset-image，就能按照markdown的格式进行图片的插入。" class="headerlink" title="【第二步】在根目录安装hexo-asset-image，就能按照markdown的格式进行图片的插入。"></a>【第二步】在根目录安装hexo-asset-image，就能按照markdown的格式进行图片的插入。</h5><pre><code>npm install https://github.com/CodeFalling/hexo-asset-image --save
+</code></pre>
+<h5 id="【第三步】图片描述"><a href="#【第三步】图片描述" class="headerlink" title="【第三步】图片描述"></a>【第三步】图片描述</h5><pre><code>![图片描述]（包名/NO.01.001.jpg）
+示例：![](解决hexo博文图片不显示的方法/show1.jpg)
+</code></pre>
+<p>效果图如下：</p>
+<p><img src="/2023/06/17/%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E6%96%87%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E6%96%B9%E6%B3%95/show2.jpg"></p>
+<p>添加成功</p>
+<h3 id="图片不显示的解决办法"><a href="#图片不显示的解决办法" class="headerlink" title="图片不显示的解决办法"></a>图片不显示的解决办法</h3><p>也是我遇到的</p>
+<p><a href="https://so.csdn.net/so/search?q=hexo&spm=1001.2101.3001.7020">hexo</a>-asset-image的版本一定要下载我上面给出的版本，我因为版本不对，困惑了3天才得到解决</p>
+<pre><code>我之前下的版本是：
+npm install hexo-asset-image --save（不好用）
+</code></pre>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
 </search>
