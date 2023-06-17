@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTTP 请求方法</title>
-    <url>/2023/06/14/HTTP%20%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="HTTP-请求方法"><a href="#HTTP-请求方法" class="headerlink" title="HTTP 请求方法"></a>HTTP 请求方法</h1><p>HTTP 定义了一组<strong>请求方法</strong>，以表明要对给定资源执行的操作。指示针对给定资源要执行的期望动作。虽然它们也可以是名词，但这些请求方法有时被称为 <em>HTTP 动词</em>。每一个请求方法都实现了不同的语义，但一些共同的特征由一组共享：例如一个请求方法可以是<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Safe">安全的</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Idempotent">幂等的</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Cacheable">可缓存的</a>。</p>
-<p><img src="D:\Blog\themes\butterfly\source\img\deadcell.png"></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET">GET</a></p>
-<p>GET 方法请求一个指定资源的表示形式，使用 GET 的请求应该只被用于获取数据。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD">HEAD</a></p>
-<p>HEAD 方法请求一个与 GET 请求的响应相同的响应，但没有响应体。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/POST">POST</a></p>
-<p>POST 方法用于将实体提交到指定的资源，通常导致在服务器上的状态变化或副作用。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT">PUT</a></p>
-<p>PUT 方法用有效载荷请求替换目标资源的所有当前表示。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/DELETE">DELETE</a></p>
-<p>DELETE 方法删除指定的资源。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/CONNECT">CONNECT</a></p>
-<p>CONNECT 方法建立一个到由目标资源标识的服务器的隧道。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/OPTIONS">OPTIONS</a></p>
-<p>OPTIONS 方法用于描述目标资源的通信选项。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/TRACE">TRACE</a></p>
-<p>TRACE 方法沿着到目标资源的路径执行一个消息环回测试。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PATCH">PATCH</a></p>
-<p>PATCH 方法用于对资源应用部分修改。</p>
-]]></content>
-      <tags>
-        <tag>Gin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/06/13/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p><img src="/.com//clip_image001.jpg" alt="clip_image001"></p>
 <span id="more"></span>
 
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><pre><code class="bash">$ hexo new &quot;My New Post&quot;
@@ -47,44 +20,5 @@
 </code></pre>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>跨域问题</title>
-    <url>/2023/06/13/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>那我可以不进行npm run build同时npm run serve,然后根据vue前端来写后端吗</p>
-<p>理论上来说，你可以不进行 <strong>npm run build</strong> 构建，而直接使用 <strong>npm run serve</strong> 运行 Vue 开发服务器来进行前端开发，并在同一个项目中编写后端代码。</p>
-<span id="more"></span>
-
-<p>这种方式被称为前后端集成开发，其中前端和后端代码在同一个项目中，共享同一个开发环境和工具链。</p>
-<p>在这种情况下，你可以使用 Vue 开发服务器来运行前端代码，并使用后端框架（如 Gin）来编写后端 API 接口和业务逻辑。你可以通过配置后端路由来处理前端请求，并在后端代码中实现对数据库的操作、身份验证等后端功能。</p>
-<p>这种前后端集成开发的好处包括：</p>
-<ol>
-<li>简化开发流程：前后端代码在同一个项目中，可以方便地进行协同开发、调试和测试。</li>
-<li>更高的开发效率：前端和后端开发人员可以紧密合作，减少沟通成本，快速迭代开发。</li>
-<li>更好的一致性：前后端代码处于同一个代码库中，可以更容易地保持代码的一致性和协调。</li>
-</ol>
-<p>需要注意的是，前后端集成开发可能会有一些潜在的问题和限制：</p>
-<ol>
-<li>构建和部署：由于前后端代码在同一个项目中，你需要确定如何处理构建和部署。你可能需要配置不同的构建脚本和部署方案，以确保前后端代码能够分别部署到适当的环境中。</li>
-<li>跨域问题：由于前后端代码运行在同一个开发服务器中，可能存在跨域访问的问题。你可能需要在后端框架中配置跨域规则来解决这个问题。</li>
-<li>维护复杂性：前后端代码在同一个项目中，可能会增加代码的复杂性和维护成本。你需要谨慎设计和组织代码，以保持代码的可读性和可维护性。</li>
-</ol>
-<p>因此，虽然你可以进行前后端集成开发，但需要仔细考虑和规划，以确保开发流程的顺畅和代码的质量。同时，还需要根据具体项目的需求和规模来评估前后端分离开发和前后端集成开发的优缺点，选择适合的开发方式。</p>
-<p>r.Use(middleware.Cors()) 可以解决跨域问题吗？</p>
-<p><strong>r.Use(middleware.Cors())</strong> 是 Gin 框架中使用的中间件来处理跨域请求。它可以帮助解决跨域问题，但具体是否能解决跨域问题还取决于你的配置和应用场景。</p>
-<p>跨域请求是指在浏览器中，当你的前端代码运行在一个域名下，而向另一个域名发起请求时，浏览器会阻止该请求。这是由浏览器的同源策略所决定的安全限制。因此，如果你的前端代码运行在一个域名下，而后端 API 部署在另一个域名下，就会遇到跨域请求的问题。</p>
-<p><strong>r.Use(middleware.Cors())</strong> 中间件可以在 Gin 框架中设置跨域请求的响应头，以允许跨域请求。它会将以下响应头添加到服务器的响应中：</p>
-<ul>
-<li><strong>Access-Control-Allow-Origin</strong>：指定允许访问的域名。你可以设置为 ***** 表示允许所有域名访问，或设置为具体的域名。</li>
-<li><strong>Access-Control-Allow-Methods</strong>：指定允许的请求方法。默认情况下会包含 <strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>PATCH</strong>, <strong>DELETE</strong>, <strong>OPTIONS</strong> 这些常见的请求方法。</li>
-<li><strong>Access-Control-Allow-Headers</strong>：指定允许的请求头。默认情况下会包含一些常见的请求头，如 <strong>Content-Type</strong>, <strong>Authorization</strong> 等。</li>
-</ul>
-<p>通过设置这些响应头，浏览器会认可服务器的响应，允许跨域请求成功。</p>
-<p>但需要注意的是，<strong>r.Use(middleware.Cors())</strong> 中间件的默认配置是比较宽松的，允许所有的域名、所有的请求方法和请求头进行访问。在实际开发中，为了安全考虑，你可能需要根据你的应用需求，设置更严格的跨域配置，例如只允许特定的域名、请求方法或请求头进行访问。</p>
-<p>因此，<strong>r.Use(middleware.Cors())</strong> 可以帮助解决一般的跨域问题，但你需要根据具体需求进行配置和调整，以确保安全性和符合你的应用需求。</p>
-]]></content>
-      <tags>
-        <tag>Gin</tag>
-      </tags>
   </entry>
 </search>
